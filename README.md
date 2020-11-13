@@ -18,7 +18,7 @@ Pour réaliser cela, on a utilisé Unity3D pour créer le monde virtuel et Photo
 
 # 🎬 Videos de démonstration
 
-Une video est disponible [ici](./Portal-coop.mp4)
+Une video est disponible [ici](https://github.com/dleveque/Portal-coop/raw/master/Portal-coop.mp4)
 
 # ♠ But du jeu
 
