@@ -1,0 +1,10 @@
+gun : myuline_annatar 
+door: T3 
+big button: kpowa
+button: Gunship413
+cube dropper: C.L.
+elevator: CamBen
+fizzler: Smakkohooves
+security cam: Gunship413
+testCubeChamber: aaronlink127
+chamber lock: C.L.
