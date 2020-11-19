@@ -1,106 +1,105 @@
 <div align="center">
   <img src="Assets/logo.png" alt="drawing" width="200px;"/>
   <h1><b>Portal Coop</b></h1>
-  <h3>Environnement collaboratif dans l'univers d'Aperture Science</h3>
+  <h3>Collaborative environment in the Aperture Science laboratory</h3>
 </div>
 
 </br></br>
 
-# 📝 Description du projet
+# 📝 Description of the project
 
-Projet réalisé au sein du module IEVA (Interaction avec les Environnements de réalité Virtuelle ou Augmentée) de mon double diplome SIIA (Système Interactif Intelligent et Autonome).
-Il était question dans ce projet de réussir à mettre en place des interactions multi-utilisateurs dans un monde virtuel. Par exemple en mettant en place des interactions avec des objets qui ne peuvent pas être faites à un seul utilisateur.
+Project realised in the IEVA module (Interaction with Virtual or Augmented Reality Environments) of my dual degree SIIA (Intelligent and Autonomous Interactive System).
+This project was about successfully setting up multi-user interactions in a virtual world. For example by implementing interactions with objects that cannot be done by a single user.
 
-Pour réaliser cela, on a utilisé Unity3D pour créer le monde virtuel et Photon pour synchroniser l'ensemble des actions à travers les différentes machines.
+To achieve this, Unity3D was used to create the virtual world and Photon has been used to synchronise all the actions across the different machines.
 
-> ### [Une version en WebGL du projet est disponible ici](https://dleveque.github.io/Portal-coop/) 
-> Pour jouer, il suffit d'ouvrir dans deux fenêtres ce même lien.
+> ### [A WebGL version of the project is available here.](https://dleveque.github.io/Portal-coop/) 
+> To play, simply open this same link in two windows.
 
-# 🎬 Videos de démonstration
+# 🎬 Demonstration videos
 
-Une video est disponible [ici](https://github.com/dleveque/Portal-coop/raw/master/Portal-coop.mp4)
+A video is available [here](https://github.com/dleveque/Portal-coop/raw/master/Portal-coop.mp4)
 
-# ♠ But du jeu
+# ♠ Aim of the game
 
-Vous vous trouvez dans une salle de test du célèbre laboratoire d'Aperture Science. Ce test est destiné à évaluer la capacité des humains à pouvoir interagir et collaborer au sein d'un monde virtuel à travers leurs avatars respectifs.
+You are in a test room of the famous Aperture Science laboratory.This test is designed to test your ability to interact and collaborate with others in a virtual world through their respective avatars.
 
-__Vous devrez analyser les différents éléments qui composent la pièce, afin de comprendre comment sortir de la pièce et rejoindre l'ascenseur situé de l'autre côté de la porte.__
+__You will need to analyse the different elements that make up the room in order to understand how to exit the room and reach the lift on the other side of the door.__
 
-Sachez que le cube et le joueur ont une masse, que le gros bouton près de la porte est sensible au poids et que le champ de forces détruit seulement les objets non autorisés (comme les cubes) mais pas les joueurs.
+Be aware that the cube and the player have a mass, the big button near the door is weight-sensitive, and the force field only destroys unauthorised objects (such as cubes) but not the players.
 
-De plus une salle de synchronisation a été ajoutée derrière la première porte. C'est la suivante qui donne accès à l'ascenseur. Ceci permet d'éviter le sacrifice d'un des joueurs et de vérifier que ce dernier ne reste pas sur le gros bouton pour laisser les joueurs sortir de la zone de test.
+In addition, a synchronisation room has been added behind the first door. It is the next one that gives access to the lift. This allows to avoid the sacrifice of one of the players and to check that he does not stay on the big button to let the players leave the test area.
 
-Saurez-vous résoudre l'énigme et rejoindre l'ascenseur ?
+Will you be able to solve the puzzle and reach the lift?
 
-# 🎮 Contrôle
+# 🎮 Control
 
-> - Flèches directionnelles pour se déplacer
-> - Souris + click gauche maintenu pour déplacer le curseur
-> - Touche B pour interagir / agripper un objet
-> - Touche N pour relâcher l'objet
-> - Touche C pour envoyer un message d'aide à porter
-> - Touche V pour envoyer un message de viser
+> - Directional arrows for moving around
+> - Mouse + left click and hold to move the cursor.
+> - B key to interact / grasp an object
+> - N key to release the object
+> - C key to send a help message to be carried
+> - V key to send a "look at to" message
 
-# 🤝Choix du type de co-manipulation
+# 🤝 Choice of the type of co-manipulation
 
-Pour l'objet à manipuler, j'ai choisi de conserver l'exemple qui a été fourni en début de projet avec un cube. J'ai par la suite remplacé ce dernier par un modèle 3D.
+For the object to be handled, I chose to keep the example that was provided at the beginning of the project with a cube. I then replaced it with a 3D model.
 
-Pour réussir à faire une co-manipulation du cube, j'ai contraint ce dernier avec une notion de poids. Chaque utilisateur est muni d'un outil, un générateur antigravitationnel, leur permettant de pouvoir retirer une certaine quantité de masse au cube pour pouvoir le soulever. Bien entendu, plus il a d'outil qui manipule le cube, plus on peut le soulever haut.
+To be able to co-manipulate the cube, I constrained it with a notion of weight. Each user is provided with a tool, an anti-gravitational generator, allowing them to remove a certain amount of mass from the cube in order to lift it. Of course, the more tools they have to manipulate the cube, the higher it can be lifted.
 
-Tous les utilisateurs peuvent effectuer les mêmes actions sur le cube. Leurs actions sont moyennées pour positionner le cube dans l'espace et sommer pour la rotation de l'objet.
+All users can perform the same actions on the cube. Their actions are averaged to position the cube in space and summed for the rotation of the object.
 
-# 👀 Awareness d'interaction 
+# 👀 Interaction Awareness 
 
-L'utilisateur peut interagir sur les objets disposés dans l'environnement à l'aide son curseur.
-Cette zone d'interaction est mise en surbrillance lorsque le curseur est dedans. Elle se colore en bleu pour signifier que l'utilisateur la survole et en orange lorsqu'il interagit avec.
-De plus un pop-up apparaît en bas de l'écran pour indiquer l'action à effectuer pour interagir avec l'objet.
+The user can interact on the objects in the environment using his cursor.
+An interaction area is highlighted when the cursor is inside. Coloured blue to indicate that the user is hovering over it and orange when interacting with it.
+In addition, a pop-up appears at the bottom of the screen to indicate the action  to interact with the object.
 
-Par exemple pour le bouton situé dans la pièce, lorsqu'on approche son curseur sur son sommet, une sphère bleue apparaît avec un message indiquant que pour interagir avec, il faut appuyer sur la touche 'B'.
-De même pour manipuler le cube via l'une de ses interfaces disposées sur chacune de ses faces ('B' pour attraper et 'N' pour relâcher)
+For example, for the button located in the room, when you approach the cursor on the top of the button, a blue sphere appears with a message indicating that to interact with it, you must press the 'B' key.
+Likewise to manipulate the cube via one of its interfaces on each of its faces ('B' for catch and 'N' for release).
 
-Pour faire comprendre que l'objet est trop lourd, j'ai choisi qu'à partir d'une certaine hauteur le cube se mettrait à vibrer pour simuler le fait que le générateur antigravitationnel n'a plus la capacité de le soulever. Si l'utilisateur persiste, l'interface sur laquelle il interagit s'éloigne du cube et sort de sa portée. Le cube retrouve les effets de pesanteur et retombe au sol.
-L'utilisateur est alors contraint à appeler à l'aide un autre utilisateur pour l'aider.
+To make it clear that the object is too heavy, I chose that once it reached a certain height the cube would start to vibrate to simulate the fact that the antigravitational generator can no longer lift it. If the user persists, the interface on which he interacts moves away from the cube and goes out of its reach. The cube regains the effects of gravity and falls back to the ground.
+The user is then forced to call another user for help.
 
-# 📣 Envoi de message d'aide
+# 📣 Sending a help message
 
-Pour envoyé un message d'aide, il est possible d'envoyer à tout moment des messages sous forme d'icône dans l'environnement virtuel. Dans cette version, deux icônes sont présentes:
+To send a help message, you can send iconic messages in the virtual environment at any time. In this version, two icons are present:
   
-  - <img src="Assets/Resources/PortalElements/MessageIcon/carry.png" width="40px"/> Permet d'inciter l'autre utilisateur à manipuler lui aussi le cube. Envoi possible en appuyant sur la touche 'C'.
-  - <img src="Assets/Resources/PortalElements/MessageIcon/point.png" width="40px"/> Permet d'indiquer à l'autre utilisateur une zone à regarder en particulier. Envoi possible en appuyant sur la touche 'V'.
+  - <img src="Assets/Resources/PortalElements/MessageIcon/carry.png" width="40px"/> Allows the other user to manipulate the cube as well. Can be sent by pressing the 'C' key.
+  - <img src="Assets/Resources/PortalElements/MessageIcon/point.png" width="40px"/> Allows you to tell the other user a particular area to be viewed. Can be sent by pressing the 'V' key.
 
-Une fois envoyée, l'icône se dirigera dans la direction que pointe l'outil et s'arrêtera au premier obstacle solide. De plus l'icône prendra la couleur de l'utilisateur qui l'a envoyé pour indiquer aux autres l'expéditeur du message.
+Once sent, the icon will point in the direction of the tool and will stop at the first solid obstacle. Furthermore, the icon will take on the colour of the user who sent it to indicate to the others the sender of the message.
 
-Cette couleur est attribuée automatiquement dès le début de la partie et s'applique sur l'outil et le curseur.
+This colour is assigned automatically at the start of the game and is applied to the tool and cursor.
 
-# 🧭 Salle de test
+# 🧭 Test room
 
-À force de manipuler un cube lors de la conception du projet, cela m'a fait rappeler un certain jeux vidéo éditer par Valve du nom de Portal. Il s'agit d'un puzzle game où le joueur est amené à résoudre des énigmes pour passer de salle en salle. Souhaitant un jour faire un jeu avec Unity et sachant que le sujet du projet était de réaliser un défi à plusieurs utilisateurs, j'ai décidé d'en faire un peu plus. D'autant plus que la communauté avait créé un nombre incroyable de modèle 3D gratuit et en libre accès.
+By playing with a cube during the design of the project, it reminded me a specific video game edited by Valve called Portal. It's a puzzle game where the player has to solve enigmas to move from room to room. Wishing one day to make a game with Unity and knowing that the subject of the project was to make a challenge to several users, I decided to do a little more. Especially since the community had created an incredible number of free and open access 3D models.
 
-J'ai donc rajouté au fur et à mesure des modèles 3D et textures pour améliorer l'immersion et l'interaction. En effet en faisant tester le niveau auprès de mon entourage, je me suis rendu compte qu'il était assez courant que l'utilisateur perde son curseur. J'ai donc décidé au lieu de contraindre le curseur à ne pas sortir du champ de vision, à ajouter un modèle 3D de générateur qui fixe le curseur. Ainsi l'utilisateur sait en regardant son outil, où se trouve son curseur.
+So I decided to add 3D models and textures to improve immersion and interaction. Indeed, when I tested the level with my friends and family, I realised that it was quite common for the user to lose his cursor. So in order to avoid forcing the cursor out of the field of vision, I decided to add a 3D generator model that fixes the cursor. This way the user knows where his cursor is by looking at his tool.
 
 
+# 📂 Contents of the repository
 
-# 📂 Contenu du répertoire
+    |-Assets: All the assets of the 3D world
+    |-Build: Build the project in WebGl
+    |-Portal-coop.mp4: demonstration video
+    |-Readme.md: micro report 
 
-    |-Assets: L'ensemble des assets du monde 3D
-    |-Build: Build du projet sous WebGl
-    |-Portal-coop.mp4: vidéo de démonstration
-    |-ReadMe.md: micro rapport 
+# 📦 Installation
 
-# 📦 Installation du projet
+1. Install Unity3D in version 2019.3.0f3 [Unity](https://unity3d.com/fr/get-unity/download/archive)
 
-1. Installer Unity3D dans sa version 2019.3.0f3 [Unity](https://unity3d.com/fr/get-unity/download/archive)
-
-2. Cloner le dépôt GitLab sur votre répertoire
+2. Clone the GitHub repository to your directory
 ```bash
-git clone https://github.com/dleveque/Portal-coop.git
+git clone https://github.com/dorianleveque/Portal-coop.git
 ```
 
-3. Se rendre dans le répertoire à l'aide d'un terminal
+3. Go to the directory using a terminal
 ```bash
 cd Portal-coop
 ```
 
-# 📜 Execution du projet
+# 📜 Execution
 
-Pour executer le projet, il suffit d'ajouter le projet à Unity Hub et de le lancer dans la bonne version
+To execute the project, just add the project to Unity Hub and launch it in the right version.
