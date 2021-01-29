@@ -13,7 +13,7 @@ This project was about successfully setting up multi-user interactions in a virt
 
 To achieve this, Unity3D was used to create the virtual world and Photon has been used to synchronise all the actions across the different machines.
 
-> ### [A WebGL version of the project is available here.](https://dleveque.github.io/Portal-Coop/) 
+> ### [A WebGL version of the project is available here.](https://dorianleveque.github.io/Portal-Coop/) 
 > To play, simply open this same link in two windows.
 
 # 🎬 Demonstration videos
